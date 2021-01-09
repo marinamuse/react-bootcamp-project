@@ -15,16 +15,16 @@ function Nav() {
         <NavbarBrand>BudgetPlanner</NavbarBrand>
       </Link>
       <Link to="/income">
-        <NavItem>Income</NavItem>
+        <NavItem className="text-white">Income</NavItem>
       </Link>
       <Link to="/expenses">
-        <NavItem>Expenses</NavItem>
+        <NavItem className="text-white">Expenses</NavItem>
       </Link>
       <Link to="/savings">
-        <NavItem>Savings</NavItem>
+        <NavItem className="text-white">Savings</NavItem>
       </Link>
       <Link to="/budget">
-        <NavItem>Available Budget</NavItem>
+        <NavItem className="text-white">Available Budget</NavItem>
       </Link>
     </Navbar>
   );
