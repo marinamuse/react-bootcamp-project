@@ -6,6 +6,7 @@ import Income from "./Income";
 import Expenses from "./Expenses";
 import Savings from "./Savings";
 import Budget from "./Budget";
+import Footer from "./Footer";
 
 function Main() {
   return (
@@ -16,6 +17,7 @@ function Main() {
       <Route path="/expenses" component={Expenses} />
       <Route path="/savings" component={Savings} />
       <Route path="/budget" component={Budget} />
+      <Footer />
     </>
   );
 }

@@ -4,12 +4,12 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: azure;
+#root {
+  background-color: rgb(228, 228, 228);
 }
 
 .App {
-  background-color: white;
+  background-color: rgba(52, 58, 64, 1);
   width: 80%;
   height: 100vh;
   margin: 0 auto;
@@ -17,9 +17,55 @@ body {
   -webkit-box-shadow: 0px 0px 73px 40px rgba(242, 242, 242, 1);
   -moz-box-shadow: 0px 0px 73px 40px rgba(242, 242, 242, 1);
   box-shadow: 0px 0px 73px 40px rgba(242, 242, 242, 1);
+  color: white;
 }
 
 .nav-bar {
-  padding: 0px 0px;
-  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar-item {
+  list-style: none;
+  color: white;
+}
+.carousel {
+  padding-bottom: 15vh;
+}
+.carousel-img {
+  opacity: 0.8;
+}
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  width: 30%;
+  margin: 0 auto;
+  border-radius: 7px;
+}
+.lottie-section {
+  min-height: 30vh;
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+  background-color: rgb(255, 124, 68);
+  display: flex;
+}
+.lottie-section h3 {
+  text-align: left;
+}
+.lottie-container {
+  width: 20%;
+  float: left;
+}
+footer {
+  min-height: 15vh;
+  background-color: #a6bace;
+  width: 100%;
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 11px;
+  color: white;
+}
+footer a {
+  color: white;
 }
