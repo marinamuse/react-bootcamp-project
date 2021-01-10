@@ -1,28 +1,60 @@
 import React, { useEffect, useRef } from "react";
 import lottie from "lottie-web";
 import "../App.css";
+import { Container, Row, Col } from "reactstrap";
 
 function Cards() {
-  const container = useRef(null);
+  const income = useRef(null);
 
   useEffect(() => {
     lottie.loadAnimation({
-      container: container.current,
+      container: income.current,
       renderer: "svg",
       loop: true,
       autoplay: true,
       animationData: require("../animations/income.json"),
     });
   }, []);
+  const savings = useRef(null);
+
+  useEffect(() => {
+    lottie.loadAnimation({
+      container: savings.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: require("../animations/savings.json"),
+    });
+  }, []);
 
   return (
-    <div class="lottie-section">
-      <div className="lottie-container" ref={container}></div>
-      <h3>
-        Managing your cashflows properly is one of the key contributors to
-        reaching your financial goals
-      </h3>
-    </div>
+    <>
+      <div className="lottie-container d-flex justify-content-center">
+        <Row className="lottie-row">
+          <Col>
+            <div ref={income}></div>
+          </Col>
+          <Col>
+            <h4>
+              Reach your financial goals through managing your cashflows
+              properly
+            </h4>
+          </Col>
+        </Row>
+
+        <Row className="lottie-row">
+          <Col>
+            <div ref={savings}></div>
+          </Col>
+          <Col>
+            <h4>
+              Do not spend what is left after spending, spend what is left after
+              saving
+            </h4>
+          </Col>
+        </Row>
+      </div>
+    </>
   );
 }
 

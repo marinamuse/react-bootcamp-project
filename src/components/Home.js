@@ -5,6 +5,7 @@ import income from "../images/income.png";
 import expenses from "../images/expenses.png";
 import savings from "../images/savings.png";
 import budget from "../images/budget.png";
+import Footer from "./Footer";
 import Cards from "./Cards";
 import {
   Button,
@@ -81,52 +82,57 @@ const Home = (props) => {
 
   return (
     <>
-      <div className="container text-center mt-4">
-        <h2>Welcome to BudgetPlanner</h2>
-        <h4>Manage your cashflows easily</h4>
-        <p>What would you like to do?</p>
+      <div className="home text-center">
+        <div className="home-header">
+          <h2>Welcome to BudgetPlanner</h2>
+          <h4>Manage your cashflows easily</h4>
+          <p>What would you like to do?</p>
+        </div>
         <Link to="/income">
-          <Button color="success" className="m-2">
+          <Button color="success" className="btn-main">
             Manage income
           </Button>
         </Link>
         <Link to="/expenses">
-          <Button color="danger" className="m-2">
+          <Button color="danger" className="btn-main">
             Manage expenses
           </Button>
         </Link>
         <Link to="/savings">
-          <Button className="m-2">Manage savings</Button>
+          <Button className="btn-main">Manage savings</Button>
         </Link>
         <Link to="/budget">
           {" "}
-          <Button className="m-2">Get available budget</Button>
+          <Button className="btn-main">Get available budget</Button>
         </Link>
       </div>
-      <Carousel
-        activeIndex={activeIndex}
-        next={next}
-        previous={previous}
-        className="carousel container text-center mt-4"
-      >
-        <CarouselIndicators
-          items={items}
+      <div className="carousel-main">
+        <Carousel
           activeIndex={activeIndex}
-          onClickHandler={goToIndex}
-        />
-        {slides}
-        <CarouselControl
-          direction="prev"
-          directionText="Previous"
-          onClickHandler={previous}
-        />
-        <CarouselControl
-          direction="next"
-          directionText="Next"
-          onClickHandler={next}
-        />
-      </Carousel>
+          next={next}
+          previous={previous}
+          className="carousel text-center"
+        >
+          <CarouselIndicators
+            items={items}
+            activeIndex={activeIndex}
+            onClickHandler={goToIndex}
+          />
+          {slides}
+          <CarouselControl
+            direction="prev"
+            directionText="Previous"
+            onClickHandler={previous}
+          />
+          <CarouselControl
+            direction="next"
+            directionText="Next"
+            onClickHandler={next}
+          />
+        </Carousel>
+      </div>
       <Cards />
+      <Footer />
     </>
   );
 };
