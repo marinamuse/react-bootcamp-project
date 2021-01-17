@@ -48,7 +48,7 @@ function Cards() {
           </Col>
           <Col>
             <h4>
-              Do not spend what is left after spending, spend what is left after
+              Do not save what is left after spending, spend what is left after
               saving
             </h4>
           </Col>

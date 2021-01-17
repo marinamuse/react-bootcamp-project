@@ -99,11 +99,15 @@ const Home = (props) => {
           </Button>
         </Link>
         <Link to="/savings">
-          <Button className="btn-main">Manage savings</Button>
+          <Button color="primary" className="btn-main">
+            Manage savings
+          </Button>
         </Link>
         <Link to="/budget">
           {" "}
-          <Button className="btn-main">Get available budget</Button>
+          <Button color="primary" className="btn-main">
+            Get available budget
+          </Button>
         </Link>
       </div>
       <div className="carousel-main">

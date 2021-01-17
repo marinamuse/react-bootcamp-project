@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import Login from "./components/Login";
 import Main from "./components/Main";
@@ -8,8 +9,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Switch>
-          <Route path="/" exact component={Login} />
           <Route component={Main} />
+          <Route path="/" exact component={Login} />
         </Switch>
       </BrowserRouter>
     </div>

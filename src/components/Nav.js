@@ -5,6 +5,7 @@ import {
   Navbar,
   NavbarBrand,
   NavItem,
+  NavLink,
   Collapse,
   NavbarToggler,
 } from "reactstrap";
@@ -15,23 +16,21 @@ function Nav() {
 
   return (
     <Navbar color="dark" dark className="nav-bar" sticky="top" expand="md">
-      <Link to="/home">
-        <NavbarBrand>BudgetPlanner</NavbarBrand>
-      </Link>
+      <NavbarBrand href="/home">BudgetPlanner</NavbarBrand>
       <NavbarToggler onClick={toggle} color="white" />
       <Collapse isOpen={isOpen} navbar>
-        <Link to="/income">
-          <NavItem className="navbar-item px-3">Income</NavItem>
-        </Link>
-        <Link to="/expenses">
-          <NavItem className="navbar-item px-3">Expenses</NavItem>
-        </Link>
-        <Link to="/savings">
-          <NavItem className="navbar-item px-3">Savings</NavItem>
-        </Link>
-        <Link to="/budget">
-          <NavItem className="navbar-item px-3">Available Budget</NavItem>
-        </Link>
+        <NavLink href="/income" className="navbar-item px-3">
+          Income
+        </NavLink>
+        <NavLink href="/expenses" className="navbar-item px-3">
+          Expenses
+        </NavLink>
+        <NavLink href="/savings" className="navbar-item px-3">
+          Savings
+        </NavLink>
+        <NavLink href="/budget" className="navbar-item px-3">
+          Available Budget
+        </NavLink>
       </Collapse>
     </Navbar>
   );

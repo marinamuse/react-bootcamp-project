@@ -1,5 +1,5 @@
 import React from "react";
-import { Breadcrumb, BreadcrumbItem } from "reactstrap";
+import { Breadcrumb, BreadcrumbItem, Badge } from "reactstrap";
 
 function Budget() {
   return (
@@ -10,7 +10,14 @@ function Budget() {
         </BreadcrumbItem>
         <BreadcrumbItem active>Available budget</BreadcrumbItem>
       </Breadcrumb>
-      <h1>Budget available</h1>
+      <div className="text-center">
+        <h4 className="text-primary">
+          Budget available to spend now
+          <Badge className="ml-4" color="success">
+            ${1290 - (1290 / 100) * 40}
+          </Badge>
+        </h4>
+      </div>
     </div>
   );
 }

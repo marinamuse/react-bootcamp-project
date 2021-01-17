@@ -12,7 +12,7 @@ class Savings extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      desiredSavings: "",
+      desiredSavings: "40%",
       savedLevel: "",
     };
 
@@ -62,9 +62,11 @@ class Savings extends React.Component {
               placeholder={this.state.savedLevel}
               onChange={this.handleChange}
             ></Input>
-            <Button type="submit" values="submit">
-              Save
-            </Button>
+            <div className="text-center">
+              <Button className="mt-4" type="submit" values="submit">
+                Update
+              </Button>
+            </div>
           </FormGroup>
         </div>
       </>

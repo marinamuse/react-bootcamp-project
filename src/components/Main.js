@@ -12,6 +12,7 @@ function Main() {
   return (
     <div className="main">
       <Nav />
+
       <Route path="/home" component={Home} />
       <Route path="/income" component={Income} />
       <Route path="/expenses" component={Expenses} />
